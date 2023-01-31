@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+  <meta charset="UTF-8" />
+  <title>SISTEM KLASIFIKASI PENJADWALAN PERTANDINGAN UNTUK KEAMANAN</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <div class="container contact-form">
+    <div class="contact-image">
+      <img src="/static/img/UNISBA.png" alt="logo" />
+    </div>
+    <form action="{{ url_for('predict')}}" method="post">
+      <h3>SISTEM KLASIFIKASI PENJADWALAN PERTANDINGAN UNTUK KEAMANAN</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="tiket_terjual">jumlah tiket terjual</label>
+          <div class="form-group">
+            <input type="number" name="tiket_terjual" class="form-control" placeholder="tiket_terjual"
+              required="required" />
+          </div>
+
+          <label for="rivalitas">tingkat rivalitas</label>
+          <div class="form-group">
+            <select name="rivalitas" id="tingkat rivalitas" class="form-control">
+              <option value="Sangat Rendah">Sangat Rendah</option>
+              <option value="Rendah">Rendah</option>
+              <option value="Biasa">Biasa</option>
+              <option value="Tinggi">Tinggi</option>
+              <option value="Sangat Tinggi">Sangat Tinggi</option>
+            </select>
+          </div>
+
+          <label for="suporter_lawan">ticket suporter lawan</label>
+          <div class="form-group">
+            <input type="number" name="suporter_lawan" class="form-control" placeholder="suporter_lawan"
+              required="required" />
+          </div>
+
+          <label for="suporter_team">ticket suporter team</label>
+          <div class="form-group">
+            <input type="number" name="suporter_team" class="form-control" placeholder="suporter_team"
+              required="required" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-large">
+            Predict
+          </button>
+        </div>
+        <div class="col-md-6">
+          <h3>
+            Hasil Prediksi :
+            <br>{{ prediction_text }}
+            {% if (prediction_text) != 0 %}
+            <div class="mt-8">
+              <br>
+              <p>jumlah tiket terjual:
+                <br>{{ tiket_terjual }}
+              </p>
+              <p>tingkat rivalitas:
+                <br>{{ rivalitas }}
+              </p>
+              <p>tiket suporter lawan:
+                <br>{{ suporter_lawan }}
+              </p>
+              <p>tiket suporter suporter team:
+                <br>{{ suporter_team }}
+              </p>
+            </div>
+            {% endif %}
+          </h3>
+        </div>
+      </div>
+    </form>
+    <a href="/" class="btn btn-primary btn-block btn-large">Reset</a>
+  </div>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
