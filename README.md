@@ -1,4 +1,4 @@
-# SISTEM KLASIFIKASI PENJADAWALN PERTANDINGAN UNTUK KEAMANAN
+# SISTEM KLASIFIKASI PENJADAWALAN PERTANDINGAN UNTUK KEAMANAN
 
 aplikasi ini di buat untuk memenuhi tugas akhir yaitu Pengujian Perangkat Lunak yang di Ampu oleh Dosen
 **Abdi Pandu Kusuma S.Kom. , M.T.**
