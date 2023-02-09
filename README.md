@@ -7,7 +7,7 @@ aplikasi ini di buat untuk memenuhi tugas akhir yaitu Pengujian Perangkat Lunak 
 ## Cara Penggunaan
 
  - pastikan sudah menginstal Python 
- - install library python ***numpy, flask, dan pickle***
+ - install library python ***numpy, flask,scikit-learn, dan pickle***
  - jalankan file ***main.py*** dengan cara *python main.py*
  - buka browser lalu buka url **http://127.0.0.1:5000/**
  - isi input yang ada dan pilih predict untuk memberikan sebuah Hasil Prediksi
